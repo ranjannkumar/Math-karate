@@ -1,0 +1,38 @@
+:root { font-family: ui-sans-serif, system-ui; }
+.page { max-width: 720px; margin: 32px auto; padding: 16px; }
+.btn { display:inline-block; padding:10px 16px; background:#0b5fff; color:#fff; border-radius:8px; text-decoration:none; }
+.card { margin-top:24px; padding:16px; border:1px solid #e5e7eb; border-radius:12px; }
+.q { font-size:28px; margin-bottom:12px; }
+.choices { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.choice { padding:12px; border-radius:10px; border:1px solid #e5e7eb; background:#fff; cursor:pointer; font-size:18px; }
+.choice:hover { background:#f3f4f6; }
+
+.progress-wrap { position:relative; margin-bottom:16px; }
+.icons { position:absolute; top:-22px; left:0; display:flex; gap:8px; }
+.icon { font-size:18px; line-height:1; }
+.icon.fast { color:#f59e0b; }   /* ⚡ */
+.icon.slow { color:#111827; }   /* ★ black */
+.icon.wrong { color:#ef4444; }  /* ✗ red */
+
+.bar { height:10px; background:#e5f0ff; border-radius:999px; overflow:hidden; }
+.fill { height:100%; background:#0b5fff; width:0%; transition:width .25s linear; }
+
+.header {
+  width: 100%;
+  padding: 12px 20px;
+  background: #0b5fff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2px solid #0841b9;
+}
+.logo {
+  text-decoration: none;
+  color: white;
+}
+.logo:hover {
+  opacity: 0.9;
+}
