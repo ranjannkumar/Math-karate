@@ -4,6 +4,14 @@ A simple React + TypeScript web app that challenges users with quick addition pr
 
 ---
 
+## 🖼️ Screenshots
+
+### Play Screen
+![Play screen](docs/screenshots/play-screen.png)
+
+### Home Screen
+![Home screen](docs/screenshots/home-screen.png)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
