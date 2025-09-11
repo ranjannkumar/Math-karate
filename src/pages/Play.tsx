@@ -1,14 +1,9 @@
-import { useEffect } from "react";
 import { useGame } from "../store/gameStore";
 import ProgressBar from "../components/ProgressBar";
 import QuestionCard from "../components/QuestionCard";
 
 export default function Play() {
-  const { problems, startSession, current, sessionStart, sessionEnd } = useGame();
-
-  useEffect(() => {
-    if (problems.length === 0) startSession(10);
-  }, [problems.length, startSession]);
+  const { problems, current, sessionStart, sessionEnd, passed } = useGame();
 
   const finished = current >= problems.length && problems.length > 0;
 
@@ -19,7 +14,7 @@ export default function Play() {
         <QuestionCard />
       ) : (
         <div className="summary">
-          <h2>Done!</h2>
+          <h2>{passed ? "Belt Achieved! 🥋" : "Try Again"}</h2>
           {sessionStart && sessionEnd && (
             <p>Total time: {Math.round((sessionEnd - sessionStart) / 1000)}s</p>
           )}
