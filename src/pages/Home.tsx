@@ -36,6 +36,13 @@ export default function Home() {
           Start Level {level} – {belt} ({BELT_RULES[belt].items} in &lt; {BELT_RULES[belt].timeSec}s)
         </Link>
       </div>
+      {/* New Admin button */}
+        <div style={{ marginTop: 12 }}>
+          <Link to="/admin" className="btn-secondary">
+            Admin
+          </Link>
+        </div>
+
     </div>
   );
 }
