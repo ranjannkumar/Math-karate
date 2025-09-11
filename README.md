@@ -1,6 +1,6 @@
 # 🥋 Math Karate
 
-A simple React + TypeScript web app that challenges users with quick addition problems.  
+A React + TypeScript web app that challenges users with quick math problems, progress tracking, and karate belt levels.  
 
 ---
 
@@ -11,6 +11,13 @@ A simple React + TypeScript web app that challenges users with quick addition pr
 
 ### Home Screen
 ![Home screen](docs/screenshots/home-screen.png)
+
+### Result Screen
+![Result screen](docs/screenshots/result-screen.png)
+
+### Admin Screen
+![Admin screen1](docs/screenshots/admin-screen1.png)
+![Admin screen2](docs/screenshots/admin-screen2.png)
 
 ## 🚀 Getting Started
 

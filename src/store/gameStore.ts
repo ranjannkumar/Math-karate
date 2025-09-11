@@ -18,6 +18,7 @@ interface State {
   startBelt: (level: number, belt: Belt, maxSum?: number) => void;
   answer: (choice: number) => void;
   reset: () => void;
+  markShown: () => void;
 }
 
 export const useGame = create<State>((set, get) => ({
@@ -43,10 +44,12 @@ export const useGame = create<State>((set, get) => ({
     });
   },
 
+   markShown: () => set({ lastShownAt: Date.now() }),
+
   answer: (choice: number) => {
     const { problems, current, marks, lastShownAt, sessionStart, belt } = get();
     const p = problems[current];
-    const elapsed = performance.now() - lastShownAt;
+    const elapsed = Date.now() - lastShownAt;
     const correct = choice === p.correct;
 
     let mark: AnswerMark = "wrong";
@@ -58,7 +61,6 @@ export const useGame = create<State>((set, get) => ({
     const baseUpdate: any = {
       marks: [...marks, mark],
       current: next,
-      lastShownAt: Date.now(),
     };
 
     if (done) {

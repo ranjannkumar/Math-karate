@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <div className="page">
-      <h1>Welcome to Math Karate</h1>
+      <h1>Train Your Brain</h1>
       <label>Level:&nbsp;
         <select value={level} onChange={e => setLevel(Number(e.target.value))}>
           {levels.map(l => <option key={l.id} value={l.id}>{l.label}</option>)}

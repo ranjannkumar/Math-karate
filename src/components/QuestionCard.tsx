@@ -1,8 +1,14 @@
+import { useEffect } from "react";
 import { useGame } from "../store/gameStore";
 
 export default function QuestionCard() {
-  const { problems, current, answer } = useGame();
+  const { problems, current, answer, markShown } = useGame();
   const p = problems[current];
+
+  useEffect(() => {
+    if (p) markShown();   // start the per-question timer now
+  }, [current, p, markShown]);
+
   if (!p) return null;
 
   return (
